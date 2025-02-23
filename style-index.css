@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Define a altura mínima para ocupar toda a altura da janela */
+}
+
+header {
+    background-color: #1C1C1B;
+    color: #fff;
+    padding: 1em;
+    text-align: left;
+}
+
+/*Aqui ajusto o h1 com o logotipo*/
+.header-container {
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 5px 5px; /* Adiciona padding ao contêiner */
+    background-color: #1C1C1B; /* Cor de fundo do contêiner */
+    color: white; /* Cor do texto */
+}
+
+.header-container h1 {
+    margin: 0; /* Remove a margem padrão do título */
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#logo {
+    width: 45px; /* Define a largura do logotipo */
+    height: auto; /* Mantém a proporção do logotipo */ 
+    margin-top: 2px;
+    margin-left: 162px; /*Ajusta o logotipo para esquerda ou direita*/
+}
+
+/*Aqui ajusto o tamanho da barra de busca*/
+
+#search-bar {
+    width: 200px; /* Largura padrão da barra de pesquisa */
+    height: 20px; /* Altura da barra de pesquisa */
+    padding: 5px 10px; /* Padding interno para espaçamento */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda da barra de pesquisa */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: width 0.3s ease-in-out; /* Transição suave ao alterar a largura */
+    background: url('imagens/lupa.png') 20px center no-repeat; /* Ícone de lupa */
+    background-size: 30px 30px; /* Tamanho do ícone de lupa */
+    transition: width 0.3s ease-in-out;
+    background-position: right;
+    background-color: #f8f8f8;
+}
+
+#search-bar:focus {
+    width: 600px; /* Aumenta a largura ao focar na barra de pesquisa */
+}
+
+main {
+    margin: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+/*Aqui eu consigo fazer os links do menu subirem 5px e mudarem de cor ao passar o cursor do mouse*/
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block; /* Garante que o transform funcione corretamente */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */ 
+}
+
+header nav ul li a:hover {
+    transform: translateY(-5px); /* Move o link 5px para cima */
+    color: #f9cff2; /* Muda a cor do texto ao passar o mouse */
+}
+
+form#search-form {
+    margin-top: 1em;
+    text-align: center;
+}
+
+form#search-form input {
+    padding: 0.5em;
+    width: 200px;
+}
+
+form#search-form button {
+    padding: 0.5em;
+}
+
+main {
+    flex: 1; /* Permite que o main ocupe o espaço disponível */
+    padding: 2em;
+    text-align: center;
+}
+
+section#hero {
+    background-color: #f9cff2;
+    padding: 2em 0;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #1C1C1B;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+   width: 100%;
+   max-height: 500px; /* Define a altura máxima das imagens */
+   object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1C1C1B;
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+}
+
+
+.product-card {
+    background-color: #fff;
+    width: 100%; /* Ajusta para 100% do contêiner pai */
+    max-width: 250px; /* Tamanho máximo do cartão */
+    aspect-ratio: 3 / 4; /* Proporção de aspecto do cartão */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 8px #1C1C1B;
+    position: relative;
+    margin: 30px;
+    margin-left: 3px;
+}
+
+.product-footer {
+    background-color: #743b07;
+    color: white;
+    width: 100%;
+    height: 50px; /* Altura fixa do rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.product-footer h3 {
+    text-align: center;
+    margin-top: 16px;
+    font-family: "emilys-candy-regula";
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%; /* Ajusta a altura da imagem */
+    position: relative;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/*Aqui os cards de produtos vão se deslocar um pouco ao passar o cursor do mouse em cima*/
+
+.product-card:hover {
+    transform: translateY(-10px); /* Move o cartão 10px para cima */
+    transition: transform 0.5s ease; /* Aumenta a duração da transição para 0.5s */
+}
+
+/*Aqui modifiquei a cor do h3 quando passar o cursor do moude, que dentro do footer que está dentro do card */
+.product-card:hover .product-footer h3 {
+    color: #f9cff2;
+}
+
+
+footer {
+    background-color: #1C1C1B;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+
+/*Aqui está o link da fonte*/
+.edu-australian {
+    font-family: "Edu AU VIC WA NT Pre", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+
+  .emilys-candy-regular {
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
