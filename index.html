@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style-index.css">
+    <!--Aqui está o link da fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Emilys+Candy&display=swap" rel="stylesheet">
+    <title>Alma Doce</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo-alma-doce.jpg" alt="Logotipo" id="logo">
+        <h1 class="emilys-candy-regular">Alma Doce</h1>
+        </div>
+        <nav>
+            <ul class="edu-australian">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            <form id="search-form">
+                <input class="edu-australian" type="text" placeholder="Buscar produtos..." name="search" id="search-bar">
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h2 class="edu-australian">Bem-vindo à Alma Doce</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagens/docinhos-1200-800.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagens/bombons-1200-800.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagens/ovo-choco-800.jpg" alt="Imagem 3">
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+        <section id="products">
+            <br>
+            <h2 class="edu-australian">Nossos Produtos</h2>
+            <div class="product-carousel">
+                <!-- Cards de produtos serão inseridos aqui -->
+                <div class="product-card">
+                    <img src="imagens/coelhinho-300-350.jpg" alt="Chocolate">
+            <div class="product-footer">
+                <h3 class="emilys-candy-regular">Páscoa</h3>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="imagens/bolo-300-350.jpg" alt="Bolo">
+            <div class="product-footer">
+                <h3 class="emilys-candy-regular">Bolo</h3>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="imagens/brownie800.jpg" alt="Brownie">
+            <div class="product-footer">
+                <h3 class="emilys-candy-regular">Brownie</h3>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="imagens/biscoitos-800.jpg" alt="Biscoito">
+            <div class="product-footer">
+                <h3 class="emilys-candy-regular">Biscoito</h3>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="imagens/coockie-800.jpg" alt="Cookie">
+            <div class="product-footer">
+                <h3 class="emilys-candy-regular">Cookie</h3>
+            </div>
+        </div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="edu-australian">&copy; 2025 Alma Doce</p>
+    </footer>
+    <script src="carossel-index.js"></script>
+</body>
+</html>
